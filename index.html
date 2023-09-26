@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Weather Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>WebWizardy News</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section>
+        <!-- Weather Widget -->
+        <div id="weather-widget">
+            <h2>Weather</h2>
+            <p>Temperature: <span id="temperature"></span>&deg;C</p>
+            <p>Condition: <span id="condition"></span></p>
+        </div>
+
+        <!-- News Articles -->
+        <!-- <div id="news">
+            <h2>Latest News</h2>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p>Article Content</p>
+                <p>Published by: Author Name</p>
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p>Article Content</p>
+                <p>Published by: Author Name</p>
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p>Article Content</p>
+                <p>Published by: Author Name</p>
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p>Article Content</p>
+                <p>Published by: Author Name</p>
+            </div>
+            <div class="article">
+                <h3>Article Title</h3>
+                <p>Article Content</p>
+                <p>Published by: Author Name</p>
+            </div> -->
+            <!-- More articles go here -->
+            <main>
+                <div class="cards-container container flex" id="cards-container">
+                    
+                </div>
+            </main>
+            
+            <template id="template-news-card">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title">This is the Title</h3>
+                        <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                        <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- User Writing Permission -->
+        <!-- <div id="write-permission">
+            <h2>Write an Article</h2>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"><br>
+                <label for="content">Content:</label><br>
+                <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div> -->
+       
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 News and Weather</p>
+    </footer>
+    <script src="script/script.js"></script>
+    <script src="script/script2.js"></script>
+
+</body>
+</html>
+
+
+
+

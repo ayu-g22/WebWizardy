@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light gray background */
+  transition: background-color 0.3s ease;
+  /* overflow: hidden; Hide horizontal scrollbar */
+}
+
+/* Header Styles */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+}''
+
+header h1 {
+  font-size: 32px; /* Larger font size */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-3px);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff5733; /* Highlight color on hover */
+}
+
+/* Main Content Styles */
+section {
+  max-width: 100%; /* Cover the full width of the page */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Weather Widget Styles */
+#weather-widget {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#weather-widget h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#weather-widget p {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* News Articles Styles */
+#news {
+  margin-top: 20px;
+}
+
+.article {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article h3 {
+  color: #333;
+  font-size: 20px; /* Larger font size */
+  margin-bottom: 10px;
+}
+
+.article p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* User Writing Permission Styles */
+#write-permission {
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#write-permission h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#write-permission label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+#write-permission input[type="text"],
+#write-permission textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#write-permission input[type="submit"] {
+  align-items: center;
+  text-align: center;
+  background-color: #2c3e50; /* Attractive orange color */
+  color: #fff;
+  padding: 12px 24px; /* Larger padding for a stylish button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add a hover effect */
+}
+
+
+/* Footer Styles */
+
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  position: relative; /* Removed "fixed" positioning */
+  padding: 10px 0;
+}
+
+/* Hover Effects */
+header:hover, nav ul li:hover, section:hover, .article:hover, #write-permission:hover, footer:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Link Styles */
+footer a {
+  color: #ff5733;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #333;
+}
